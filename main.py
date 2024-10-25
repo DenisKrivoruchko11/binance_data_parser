@@ -63,8 +63,7 @@ def _build_plots(connections_delays: list[list[int]]):
     plt.ylabel('messages count')
     plt.legend()
     plt.grid()
-    plt.show()
-
+    plt.savefig('plot.png', dpi=300)
 
 def _get_fast_updates_by_connection(connections_messages: list[list[tuple[int, int]]]):
     events_to_updates = collections.defaultdict(lambda: [None for _ in range(CONNECTIONS_COUNT)])
